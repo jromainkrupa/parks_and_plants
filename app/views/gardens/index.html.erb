@@ -1,0 +1,12 @@
+<% @gardens.each do |garden| %>
+  <%= link_to garden_path(garden) do %>
+    <div class="card-product mb-4">
+      <%= image_tag garden.banner_url %>
+      <div class="card-product-infos">
+        <h2><%= garden.name %></h2>
+      </div>
+    </div>
+  <% end %>
+<% end %>
+
+

@@ -1,0 +1,7 @@
+<%= @garden.name %>
+
+<% @plants.each do |plant| %>
+  <%= plant.name %>
+  <%= plant.image_url %>
+  <%= link_to "destroy", plant_path(plant), method: :delete  %>
+<% end %>
