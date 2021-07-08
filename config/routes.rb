@@ -5,6 +5,8 @@ Rails.application.routes.draw do
     resources :plants, only:[:new, :create, :destroy]
   end
 
+  resources :plants, only:[:destroy]
+
   # GET gardens/11/plants/new
   # POST gardens/11/plants
 end

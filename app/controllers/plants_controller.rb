@@ -16,9 +16,8 @@ class PlantsController < ApplicationController
   end
 
   def destroy
-    @garden = Garden.find(params[:garden_id])
-    Plant.find(params[:id]).destroy
-    redirect_to garden_path(@garden)
+    @plant = Plant.find(params[:id]).destroy
+    redirect_to garden_path(@plant.garden)
   end
 
   private
